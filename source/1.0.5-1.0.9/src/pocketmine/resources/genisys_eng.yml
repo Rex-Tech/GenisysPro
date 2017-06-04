@@ -1,0 +1,130 @@
+#
+#   _____            _               _____           
+#  / ____|          (_)             |  __ \          
+# | |  __  ___ _ __  _ ___ _   _ ___| |__) | __ ___  
+# | | |_ |/ _ \ '_ \| / __| | | / __|  ___/ '__/ _ \ 
+# | |__| |  __/ | | | \__ \ |_| \__ \ |   | | | (_) |
+#  \_____|\___|_| |_|_|___/\__, |___/_|   |_|  \___/ 
+#                          __/ |                    
+#                         |___/                     
+#
+#
+#
+#GenisysPro Advanced Configuration File
+
+#Version of this file
+config:
+ version: 26
+
+level:
+ #Set if weather is enabled (rain may cause lag to older devices)
+ weather: true
+ #Weather random duration
+ weather-random-duration-min: 6000
+ weather-random-duration-max: 12000
+ #Random lightning interval，default as 10s, 0 = disable
+ lightning-time: 200
+ #Set if lightning strikes have fire afterwards
+ lightning-fire: false
+ #Set if fire should spread (trees, etc.)
+ fire-spread: false
+
+player:
+ #Set if hunger is enabled
+ hunger: true
+ #Choose if experience is enabled
+ experience: true
+ #Choose if to keep a player's inventory after they die
+ keep-inventory: false
+ #Clear the inventory of a player upon them changing their gamemode
+ auto-clear-inventory : true
+ #Choose if to keep a player's experience after they die
+ keep-experience: false
+
+developer:
+  #This setting allows the server to load plugins through the source directory over a .phar file
+  #Recommended that it stays "false"
+  folder-plugin-loader: true
+  #This setting allows the server to load plugins with Incompatible API
+  #Recommanded that it stays "false"
+  load-incompatible-api: true
+
+nether:
+ #Choose if the nether is allowed. The level of nether will generate automatically
+ allow-nether: true
+ #The name of nether's level
+ level-name: "nether"
+
+server:
+ #Choose if spawning iron golem is allowed
+ allow-iron-golem: false
+ #Choose if spawning snow golem is allowed
+ allow-snow-golem: false
+ #Choose if server.log is disabled
+ disable-log: false
+ #Choose how to remind players when someone joins the game
+ #0 = Message, 1 = Tip, 2 = Popup
+ player-msg-type: 0
+ login-msg: "§3@player joined the game"
+ logout-msg: "§3@player left the game"
+ #Set if limited creative is enabled (cannot drop items from hotbar, cannot open chests, and so on)
+ limited-creative: true
+ #Set if add DestroyBlockParticle
+ destroy-block-particle: true
+ #Set if splash potions are enabled
+ allow-splash-potion: true
+ #Set if Advanced Command Selector is enabled
+ advanced-command-selector: false
+ #Set if enable ResourcePackManager
+ enable-resource: false
+
+enchantment:
+ #Choose if anvils are enabled
+ enable-anvil: true
+ #Choose if enchantment tables are enabled
+ enable-enchanting-table: true
+ #Choose if to count bookshelves (may cause server lag)
+ #If this option is false, the server will use a random count (0~15)
+ count-bookshelf: false
+
+redstone:
+ ################################################
+ ####Choose if the redstone system is enabled####
+ ################################################
+ #If it is false, the redstone system won't work#
+ ################################################
+ enable: false
+ #Choose if frequency pulses are enabled
+ frequency-pulse: false
+ #Set the frequency of pulse. Default = 1s
+ pulse-frequency: 1
+
+dserver:
+ #The count of all multi-server unified
+ enable: false
+ #Update Query automatically
+ query-auto-update: false
+ #Update Query periodically
+ query-tick-update: true
+ #The max players' on the MOTD
+ motd-max-players: 0
+ #The max players' on the Query. 0=Default
+ query-max-players: 0
+ #Show the number of all players on MOTD
+ motd-all-players: false
+ #Show the number of all players on Query
+ query-all-players: false
+ #Show the number of online players on MOTD
+ motd-players: false
+ #Show the number of online players on Query
+ query-players: false
+ #Update Frequency. 20=1s
+ time: 40
+ #Auto-retry # of times when server fails
+ retry-times: 3
+ #the server list，Separate by ';'，e.g. 1.example.com:19132;2.example.com:19133
+ server-list: ""
+
+inventory:
+ #Set this to true if you have problems with anvils. This will process inventory transactions in a vanilla fashion with no anti-cheats or verification.
+ allow-cheats: false
